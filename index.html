@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii Art</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cont">
+        <canvas id="mycanvas"></canvas>
+        <!--  -->
+        <div class="mytext">
+
+            <span class="heading">Video to ASCII ART</span>
+            <span class="sub-heading">Hi 👋. I am Ayush 👨🏻‍💻, a dev. </span>
+            <span class="sub-heading">CODE : <a href="https://github.com/Ayush-pbh/ASCII-Art">GitHub</a></span>
+
+            <span class="sub-heading">Below are the steps to make one yourself!</span>
+            <span class="steps">1. Define a string named density, in order of brightness.</span>
+            <span class="steps">Density String:<br><img src="./density-string.png" alt="density-string"></span>
+            <span class="steps-code">"Ñ@#W$9876543210?!abc;:+=-,._ "</span>
+            <span class="steps">2. Go to each pixel of the image and calculate average brightness</span>
+            <span class="steps-code">average = (red + green + blue) / 3</span>
+            <span class="steps">3. The average brightness can be some wierd floating point number. So floor it up!</span>
+            <div class="steps-code">average = floor(average)</div>
+            <span class="steps">4. Map this average brightness to the index of the density string. This index will represent our pixel brightness to the density string caharacter.</span>
+            <div class="steps-code"> index  = map(average,0,255,len,0)</div>
+            <span class="steps">Explanation : the above line says, Map average : which ranges from 0➡️255, to len of the density string. ranges from len➡️0</span>
+            
+            
+            <span class="steps">5. Now just write the density string caharacter at index (we just calculated that) to the pixel position!</span>
+            <span class="steps">Done! 🎉. Just do that for every frame of the live video stream.</span>
+            
+
+        </div>
+    </div>
+    <script src="./p5.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

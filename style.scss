@@ -1,0 +1,75 @@
+html{
+    height:100vh;
+    width:100%;
+    margin:0;
+    padding:0;
+    body{
+        height:100vh;
+        width:100%;
+        margin:0;
+        padding:0;    
+        .cont{
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top:0px;
+            left:0px;
+            display: flex;        
+        }
+        .mytext{
+            font-family: 'Ubuntu Mono', monospace;
+            .heading{
+                font-size: 2rem;
+                padding:10px;
+                display: block;
+            }
+            .sub-heading{
+                font-size: 1.3rem;
+                padding:10px;
+                display: block;
+            }
+            .steps{
+                font-size: 1.3rem;
+                padding:10px;
+                display: block;
+                background-color: #d3d3d3;
+                margin: 10px 5px;
+                border-radius: 15px;
+                position: relative;
+                width:calc(100% - 30px);
+
+                img{
+                    position: relative;
+                    width:100%;
+                    max-width: 400px;
+                }
+            }
+            .steps-code{
+                font-size: 1rem;
+                padding:10px;
+                display: block;
+                background-color: #2e2e2e;
+                color : #ccc;
+                margin: 10px 5px;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+
+// Media Query
+
+/* Media query for devices with a screen width of 768 pixels or more (laptops, desktops, wide screens) */
+@media screen and (min-width: 768px) {
+    .cont {
+      flex-direction: row;
+    }
+  }
+  
+/* Media query for devices with a screen width less than 768 pixels (mobile devices) */
+@media screen and (max-width: 767px) {
+    .cont {
+        flex-direction: column;
+    }
+}
